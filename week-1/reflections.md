@@ -33,3 +33,11 @@ I think the most important commands are the help & man command so that you can f
 -help: pulls up a list of common commands; help + command tells you what that command does
 
 ## 1.4 Create, Fork, and Clone Repositories
+
+Creating a new repository is quite easy. You'll want to do this from your GitHub profile in the browser. Simply navigate to https://github.com/USERNAME?tab=repositories and click the green button "New" to create your repository. Give it a logical name, an optional description, and select any relevant licenses, then click "create repository."
+
+To fork off of an existing repository, you'll first want to find that repository on GitHub (at a URL such as: https://github.com/USERNAME/REPOSITORYNAME), and click the "fork" button near the top of the right-nav. Then select the GitHub profile you'd like to fork it into (generally your own), and you're good to go.
+
+Finally, you'll likely want to clone that repository locally so that you can begin working on it on your machine. To do so, look for the clone box toward the bottom of the right-nav, and copy the URL as either HTTPS or SSH (such as: https://github.com/bbensch09/p0-cli-exploration.git (Links to an external site.)). You'll then want to navigate to the directory in terminal where you want the cloned repository to live locally, and then run the command "git clone {URL}".
+
+My only real struggle with this task was in figuring out how to delete the whole repo folder before I could add it again. I was using the syntax "rm -r", which then prompted me to verify whether I wanted to override every single file in the repo, of which there were many. Turns out I just needed to use the syntax "-rf" to force delete everything in the folder.

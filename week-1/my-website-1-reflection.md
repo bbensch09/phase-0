@@ -1,0 +1,15 @@
+##Paste a link to your [USERNAME].github.io repository.
+  https://github.com/bbensch09/bbensch09.github.io
+##Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
+  To create a GitHub repository, you're basically going to create a new folder on the web, copy the URL link, and then run a simple command that will clone that folder and its contents to your local hard drive. First, log in to your GitHub profile. Then navigate to the repositories tab, and then click the bright green button called "New". Next, give your repository a relevant name, and set any open source licenses you feel are appropriate. Then click "Create repsoitory". Now that your repository exists on the web, you'll want clone it locally to your hard drive. To do so, first copy the link in the bottom of the right nav that says "clone URL". Then naviate in terminal to the location you want to store this project locally, and enter the command "git clone PASTEURL".
+##Describe what open source means.
+  Open source means that your code is available to the public to copy, modify, and redistribute. There are various degrees of open-source licenses that generally govern whether or not original authors must receive credit, whether modifications can be commericalized, and to what degree modifications of the code must remain open-source.
+##What do you think about Open Source? Does it make you nervous or protective? Does it feel like utopia?
+  A little bit of both. On the whole I feel like more things should be open source than kept proprietary, and I understand that we would be much further behind as a society without open source. That being said, I likewise recognize that in order to sustain a viable business, there are sometimes needs to protect the "secret sauce." As such, I think developers should generally default to being open source unless there is a substantial threat to the viability of the business by making code publically accessible.
+##Assess the importance of using licenses.
+  I think it's highly important, though I'll be honest that I didn't fully digest all of the differences between Apache, GPL, MIT, etc. I know that MIT is most permissive, and that GPL seems to be the most commonly used, but I'll want to do more research on these before publishing any non-DBC code of mine.
+##What concepts were solidified in the challenge? Did you have any "aha" moments? What did you struggle with?
+  I think I'm finally comfortable with the core git commands to create new branches and stage/commit/push changes. Not really an "aha", moreso a function of sufficient repetition.
+##Did you find any resources on your own that helped you better understand a topic? If so, please list it.
+  I found this stackoverflow article about GPL vs. MIT licenses, but honestly would still want to do more research before deciding what license to use for my own website code outside of DBC (where I assume we'll always use MIT.)
+  http://stackoverflow.com/questions/3902754/mit-vs-gpl-license

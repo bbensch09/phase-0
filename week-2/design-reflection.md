@@ -1,7 +1,10 @@
 #Below should be the image file of my site map.
+Notes to self:
+ - MUST include current directory folder name in the relative path
+ i.e. /week-2/imgs/site-map.png
+ - unless the image file is in the same folder as the .md file. if that's the case, then just use filename
+ /imgs/site-map.png DOESN"T WORK
 
-![site map image](/week-2/imgs/site-map.png)
+
+![site map image](/week-2/imgs/site-map.png "Brians sitemap")
 #more attempts
-![including imgs in path but not week2](/imgs/site-map.png)
-![including week 2 in path](/week-2/site-map2test.png)
-![not including week 2](site-map2test.png)

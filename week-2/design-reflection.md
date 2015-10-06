@@ -1,4 +1,5 @@
 #Below should be the image file of my site map.
+![site map image](/week-2/imgs/site-map.png "Brians sitemap")
 Notes to self:
  - MUST include current directory folder name in the relative path
  i.e. /week-2/imgs/site-map.png
@@ -7,7 +8,6 @@ Notes to self:
  /imgs/site-map.png DOESN"T WORK
  - Also note: Absolute references will never work.
 
-![site map image](/week-2/imgs/site-map.png "Brians sitemap")
 #What are the 6 Phases of Web Design?
 1. Information gathering
 2. Planning

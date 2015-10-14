@@ -1,3 +1,19 @@
+/*What is important to know when linking an external file (like a stylesheet) to an HTML file?
+ - It's important to know the general syntax of the link element, as well as where your file is located in the directory so that you can build your relative file path. Also, it's important to know that you can link to multiple CSS files, and that the browser is going to read and evaluate them in order of top to bottom. So if you are using two or more filess, you need to keep in mind that if you have matching/conflicting selectors, the browser will prioritize the ones in the second or last file.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+- We used the float:left and float:right properties in order to create our columns, rather than using a table format, which involves far more lines of tr/td code and learned in my GPS that tables are to be avoided if at all possible. In general it took a lot of trial and error to get things right. Not hard per se, but just a lot of guesswork.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+- We used everything from font-size to color to margins.
+
+Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+- We used a number of class designations, and chose to use classes over IDs because it is a best practice we learned in one of the training videos. Because IDs can only be used once, classes are far more flexible and should generally result in more scalable and efficient CSS.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+- We think our final code was much cleaner than the actual Berkshire site, which didn't appear to have a CSS file at all, and just made all of the styling calls using in-line HTML tags. Therefore, in order ot change any of the font size or colors in the real site, you'd have to go in and actually edit each of the individual elements, rather than just making the change once in your CSS file.
+*/
+
 html {
   background-color: #ffffff;
   color:#000080;

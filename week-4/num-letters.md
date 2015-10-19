@@ -24,7 +24,7 @@ Integer division is when the quotient is rounded down to it's closest integer, m
 ##What are strings? Why and when would you use them?
 Strings are simple a sequence of letters or numbers. They cannot be used in core arithmetic because they don't represent numerical value, even if they contain numbers. '12' + '12' would simply become '1212' because the string captures the characters not the value.
 ##What are local variables? Why and when would you use them?
-Local variables simply variables that you define in a given ruby file that are recorded into the ruby shell's local memory and can have values stored to them and reused in other methods. We'll generally use them for challenges like this or if we only needed to store temporary data for a user.
+Local variables simply variables that you define in a given ruby file that are recorded into the ruby shell's local memory and can have values stored to them and reused in other methods. They must start with a lowercase letter and should use underscores rather than CamelCase for variable names with ultiple words. We'll generally use them for challenges like this or if we only needed to store temporary data for a user.
 ##How was this challenge? Did you get a good review of some of the basics?
 It was fine. Not at all difficult, but somewhat tedious, namely because the instructions were unclear about where our results files should actually be submitted. Each of the the sub-challenges said to submit the URL from the main challenge, whereas it was only at the bottom of the main challenge that we were told to link the URLs in this num-letters.md file.
 

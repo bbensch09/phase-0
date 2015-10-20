@@ -15,18 +15,18 @@
 
 
 # 1. total initial solution
-# def total (array)
-#   sum = 0
-#   array.each do |i|
-#     sum + i
-#   end
-#   return sum
-# end
+def total (array)
+  sum = 0
+  array.each do |i|
+    sum + i
+  end
+  return sum
+end
 
 # Note that the below enumerated method works in Ruby on Rails, but not ruby
-# def total(array)
-#   array.sum
-# end
+def total(array)
+  array.sum
+end
 
 
 # 3. total refactored solution

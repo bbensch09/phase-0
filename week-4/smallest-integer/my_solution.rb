@@ -33,9 +33,14 @@
       # #puts smallest_integer([1,2,3,4,-5])
 
 #REFACTORED VERSION
+# def smallest_integer(list_of_nums)
+#   list_of_nums.sort!
+#   # ALT: this explicitly defines sort as ascending X to Y
+#   #     list_of_nums.sort! {|x,y| x<=>y}
+#   return list_of_nums[0]
+# end
+
+#FULLY REFACTORED VERSION
 def smallest_integer(list_of_nums)
-  list_of_nums.sort!
-  # ALT: this explicitly defines sort as ascending X to Y
-  #     list_of_nums.sort! {|x,y| x<=>y}
-  return list_of_nums[0]
+   list_of_nums.min {|x,y| x<=>y}
 end

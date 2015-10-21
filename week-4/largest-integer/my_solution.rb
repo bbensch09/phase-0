@@ -32,7 +32,13 @@
   #puts largest_integer([-1,-2,-30,-4,-5])
 
 # REFACTORED VERSION
+# def largest_integer(list_of_nums)
+#  list_of_nums.sort! {|x,y| y<=>x}
+# return list_of_nums[0]
+# end
+
+#FULLY REFACTORED VERSION
 def largest_integer(list_of_nums)
- list_of_nums.sort! {|x,y| y<=>x}
-return list_of_nums[0]
+   list_of_nums.max {|x,y| x<=>y}
 end
+

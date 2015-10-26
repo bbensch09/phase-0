@@ -6,18 +6,20 @@ i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # Person 1's solution - Brian Bensch
-def my_array_finding_method(array, letter)
+def my_array_finding_method(array, thing_to_find)
   #PSEUDOCODE
   #I want to use the selct method (as discussed in the release 0 reading) and set a condition that tests whether the letter argument is contained in each element.
-  # this works for a given letter, but i don't know how to pass through the argument variable
-  # array.select {|w| w =~ /[t]/}
-  #trying to figure out why the below does not work...? I confirmed that if you run include? just on the array, it wil search for an exact element to match the argument taken, meaning it only returns true if you provie a full word like "want" or "pets". Ostensibly then the final line 16 below should also work, but doesn't.
-  #array.include?(letter) #returns true when letter == "want"
-  # array.select {|word| word.include?(letter)} #should also work, but doesn't...
 
-  #eventually solved this by discovering that the mix of strings and integers in the array was causing problems. Apparently include? only works on strings and so had to convert all elements in array to strings first before calling include.
+  # this works for a given letter, but i don't know how to pass through the argument variable into the regex expression values between the  [ ]'s.'
+  # array.select {|w| w =~ /[t]/}
+
+  #I was stuck trying to figure out why the below wouldn't work for awhile. I confirmed that if you run It kept giving me the error below, which I didn't quite realize since I knew include? was a universal method that I shouldn't have to define.
+      #undefined method `include?' for 3:Fixnum
+  # array.select {|word| word.include?(letter)}
+
+  #Only after doing a google search did I realize the error was telling me it was getting stuck in the iteration when it hit the value of 3. This helped me realize that the mix of strings and integers provided in the input array was causing problems. Apparently the .include? method only works on strings and so we have to convert all elements in array to strings first before calling include.
   #SOLUTION
-  array.select { |word| word.to_s.include? letter}
+  array.select { |word| word.to_s.include? thing_to_find}
 
 end
 
@@ -27,6 +29,7 @@ end
 def my_hash_finding_method(hash, thing_to_find)
   #PSEUDOCODE
   #similar to above, I'm going to want to this time filter or include for whether or not the given values in the key-value pairs in the hash are equal to the age argument
+
   #this only returns the FIRST key which matches they thing_to_find value
   #hash.key(thing_to_find)
 

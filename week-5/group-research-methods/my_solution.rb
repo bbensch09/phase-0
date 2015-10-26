@@ -8,7 +8,7 @@ my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, 
 # Person 1's solution - Brian Bensch
 def my_array_finding_method(array, thing_to_find)
   #PSEUDOCODE
-  #I want to use the selct method (as discussed in the release 0 reading) and set a condition that tests whether the letter argument is contained in each element.
+  #I want to use the selct method (as discussed in the release 1 reading) and set a condition that tests whether the letter argument is contained in each element.
 
   # this works for a given letter, but i don't know how to pass through the argument variable into the regex expression values between the  [ ]'s.'
   # array.select {|w| w =~ /[t]/}
@@ -44,10 +44,14 @@ def my_hash_finding_method(hash, thing_to_find)
 #test
 # puts my_hash_finding_method(my_family_pets_ages,3)
 
+# REFLECTION
 # Identify and describe the Ruby method(s) you implemented.
 # 1) For this first one I used the select method which basically iterates through each element in the array. I then had to convert each element to a string, since I was going to be then calling the include? method to see if each individual element contained the letter provided in the argument
 #
 # 2) For the next one I ended up using two methods but couldn't figure out how to combine them into one refactored line. First, I called .keep_if on the hash, which iterates through each key-value pair and keeps it based on whether the value ("b" in my block) is equal to the thing we're looking for, in the case the age of the dogs. This first method returns back another hash though, so I created a new variable called new_hash, which I called the .keys method on, to return just the dog names that match the age we're looking for.
+
+# See my psuedocode sections for more details on how I worked through them. In general I followed the advice of the release 1 reading of skimming through all of the methods listed on the left nav bar for the given class you're looking, and making a note of which ones seem reasonable. Then just go through them one at a time and start trying things out.
+
 
 =begin
 # Person 2

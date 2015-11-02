@@ -1,4 +1,4 @@
-require_relative "my_solution"
+require_relative "group_solution"
 
 # PERSON 1: FIND MATCHING DATA
 describe 'PERSON 1: my_array_finding_method' do

@@ -6,16 +6,25 @@
 =begin
 #REFLECTION
 How do instance variables and methods represent the characteristics and behaviors (actions) of a real-world object?
-I guess I'd say that instance variables represent the fact that real world objects (people, animals, things) often have similarities, and you can define the expectations about an object (all people will have two hands and two feet with 10 fingers) once, and then be able to reuse that definition with as many instances as you like.
+I guess I'd say that instance variables represent the fact that real world objects (people, animals,
+ things) often have similarities, and you can define the expectations about an object (all people will
+  have two hands and two feet with 10 fingers) once, and then be able to reuse that definition with as
+  many instances as you like.
 
 When should you use instance variables? What do they do for you?
-You should use instance variables whenever you want to define a variable within a class based on the initializing arguments, and to be able to use that variable throughout the class.
+You should use instance variables whenever you want to define a variable within a class based on the
+initializing arguments, and to be able to use that variable throughout the class.
 
 Explain how to use flow control. Did you have any trouble using it in this challenge? If so, what did you struggle with?
-With flow control you basically just have to walk through the if --> elsif --> else logic yourself and make sure that you don't accidentally set it up so that you get false positives or negatives. I've used if logic a ton before in Excel, so this isn't particularly difficult for me.
+With flow control you basically just have to walk through the if --> elsif --> else logic yourself and
+make sure that you don't accidentally set it up so that you get false positives or negatives. I've used
+if logic a ton before in Excel, so this isn't particularly difficult for me.
 
 Why do you think this code requires you to return symbols? What are the benefits of using symbols?
-I've heard that symbols are more efficient at run-time because of how they are actually computed and stored as fixed constants (I think?), and so generally it's better to use symbols when creating hashes rather than string based keys. That being said, I shoudl probably read more on the topic because I'm only ~60% comfortable with that explanation.
+I've heard that symbols are more efficient at run-time because of how they are actually computed and
+stored as fixed constants (I think?), and so generally it's better to use symbols when creating hashes
+rather than string based keys. That being said, I shoudl probably read more on the topic because I'm
+only ~60% comfortable with that explanation.
 
 =end
 

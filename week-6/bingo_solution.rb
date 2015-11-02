@@ -1,7 +1,44 @@
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
-# I spent 1 hour on this challenge. start 145pm
+# I spent 1.25 hours on this challenge. start 145pm
 
+#Reflection
+=begin
+How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
+  - I actually did not like the 'outline' approach of pseudocoding. Namely, it was confusing in the
+   instructions why we needed to have an explicit call method. Maybe I didn't interpret the
+   instructions well, but it seemed redundant to take an input of "G85" and have to parse that into "G"
+   and 85. Not difficult, but also didn't teach us anything new, and was confusing why we needed to
+   pseudocode for that.
+
+What are the benefits of using a class for this challenge?
+ - A class was better so that we could call different types of methods on the class object. By making
+  the entire board's data accessible at the class level, we could iterate through and replace numbers
+   as needed.
+
+How can you access coordinates in a nested array?
+ - You simply reference the index position of the outer array first, followed by the inner array, such
+ as array[2][0], which will call the first inner value in the 3rd outer array.
+
+What methods did you use to access and modify the array?
+ - I used #each a few times, as well as #join and #to_s and #to_i to make sure my number were numbers
+ and strings were stings.
+
+Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?
+ - The only real new method I used was #join. I'd seen it once before in researching the Ruby docs but
+  hadn't actually used it before, and it made printing the out put in a humand readable grid format far
+   easier. #join basically takes an array and concatenates it the elements by joining them together
+   with any type of separator you choose, in this case just a blank space.
+
+How did you determine what should be an instance variable versus a local variable?
+- I basically made everything instance variables. This might not be ideal, but it very much worked.
+
+What do you feel is most improved in your refactored solution?
+  - I don't think I had too much smelly code in my initial solution, so nothing major was improved.
+   Just was able to take out a few things like the else = 'no match' which I was only using to test
+   my code as I went.
+
+=end
 
 # Release 0: Pseudocode
 # Outline: Define our class structure and necessary call, check, and replace methods.
@@ -103,31 +140,3 @@ new_game.call("G80")
 new_game.check
 
 
-#Reflection
-=begin
-How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
-  - I actually did not like the 'outline' approach of pseudocoding. Namely, it was confusing in the
-   instructions why we needed to have an explicit call method. Maybe I didn't interpret the
-   instructions well, but it seemed redundant to take an input of "G85" and have to parse that into "G"
-   and 85. Not difficult, but also didn't teach us anything new, and was confusing why we needed to
-   pseudocode for that.
-
-What are the benefits of using a class for this challenge?
- - A class was better so that we could call different types of methods on the class object. By making the entire board's data accessible at the class level, we could iterate through and replace numbers as needed.
-
-How can you access coordinates in a nested array?
- - You simply reference the index position of the outer array first, followed by the inner array, such as array[2][0], which will call the first inner value in the 3rd outer array.
-
-What methods did you use to access and modify the array?
- - I used #each a few times, as well as #join and #to_s and #to_i to make sure my number were numbers and strings were stings.
-
-Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?
- - The only real new method I used was #join. I'd seen it once before in researching the Ruby docs but hadn't actually used it before, and it made printing the out put in a humand readable grid format far easier. #join basically takes an array and concatenates it the elements by joining them together with any type of separator you choose, in this case just a blank space.
-
-How did you determine what should be an instance variable versus a local variable?
-- I basically made everything instance variables. This might not be ideal, but it very much worked.
-
-What do you feel is most improved in your refactored solution?
-  - I don't think I had too much smelly code in my initial solution, so nothing major was improved. Just was able to take out a few things like the else = 'no match' which I was only using to test my code as I went.
-
-=end

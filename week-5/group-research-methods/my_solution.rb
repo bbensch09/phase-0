@@ -6,38 +6,31 @@ i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # Person 1's solution - Brian Bensch
-def my_array_finding_method(array, thing_to_find)
   #PSEUDOCODE
 =begin
-  I want to use the selct method (as discussed in the release 1 reading) and set a condition
-  that tests whether the letter argument is contained in each element.
+  1) I want to use the select method (as discussed in the release 1 reading), which will iterate through each element in the array.
+  2) I want to set a condition that tests whether the letter argument is contained in each element.
+  3) The select method will automatically return the result, so don't need to explictly return.
 
-  this works for a given letter, but i dont know how to pass through the argument variable
-  into the regex expression values between the  [ ]s.
+  I was stuck trying to figure out why code below wouldn't work for awhile.
+  FAULTY CODE:   array.select {|word| word.include?(letter)}
+  ERROR: undefined method `include?' for 3:Fixnum
+  After being very confused by this error, I realized the Fixnum error was happening because there were both strings and integers in the array, and the include? method can only be called on strings. The faulty code was therefore getting stuck in the iteration when it hit the value of 3. Thefore, we have to convert all elements in array to strings first before calling the include? method.
+
+ALTERNATIVE APPROACH : I found an example using regex below, but did not know how to pass through the argument variable into the regex expression values between the  [ ]s.
   array.select {|w| w =~ /[t]/}
 
-  I was stuck trying to figure out why the below wouldn't work for awhile. I confirmed that if
-  you run It kept giving me the error below, which I didn't quite realize since I thought .include?
-  was a universal method that I shouldn't have to define.
-  undefined method `include?' for 3:Fixnum
-  array.select {|word| word.include?(letter)}
-
-  Only after doing a google search did I realize the error was telling me it was getting stuck
-  in the iteration when it hit the value of 3. This helped me realize that the mix of strings and
-  integers provided in the input array was causing problems. Apparently the .include? method only
-  works on strings and so we have to convert all elements in array to strings first before
-  calling include.
 =end
-  #SOLUTION
-  array.select { |word| word.to_s.include? thing_to_find}
 
+#SOLUTION
+def my_array_finding_method(array, thing_to_find)
+  array.select { |word| word.to_s.include? thing_to_find}
 end
 
 #test
 #puts my_array_finding_method(i_want_pets,"t")
 
-def my_hash_finding_method(hash, thing_to_find)
-  #PSEUDOCODE
+#PSEUDOCODE
 =begin
   similar to above, I'm going to want to this time filter or include for whether or not the given
   values in the key-value pairs in the hash are equal to the age argument
@@ -49,9 +42,10 @@ def my_hash_finding_method(hash, thing_to_find)
   hash.keep_if {|a,b| b.to_i == thing_to_find}
 =end
   #SOLUTION
+def my_hash_finding_method(hash, thing_to_find)
   new_hash = hash.keep_if {|a,b| b == thing_to_find}
   new_hash.keys
-  end
+end
 
 #test
 # puts my_hash_finding_method(my_family_pets_ages,3)

@@ -76,15 +76,23 @@ What is a reader method?
   end
 
 What is a writer method?
-- Similar to reader, except that a writer method allows you to write new data to an instance variable from outside the class.
+- Similar to reader, except that a writer method allows you to write new data to an instance variable
+ from outside the class.
 
 What do the attr methods do for you?
--attr_reader and attr_writer let you simply assign variables as able to be read or written to without defining methods explicitly. Even better, you can use attr_accessor to cover both your bases.
+-attr_reader and attr_writer let you simply assign variables as able to be read or written to without
+ defining methods explicitly. Even better, you can use attr_accessor to cover both your bases.
 
 Should you always use an accessor to cover your bases? Why or why not?
--You could, but it'd be considered code smell if not actually necessary. You should only make variables accessible to be read and written to if you actually need to be able to modify them or read from them. Otherwise, you might be exposing yourself to security threats or just extra debugging effort down the road.
+-You could, but it'd be considered code smell if not actually necessary. You should only make variables
+accessible to be read and written to if you actually need to be able to modify them or read from them.
+Otherwise, you might be exposing yourself to security threats or just extra debugging effort down the
+road.
 
 What is confusing to you about these methods?
--Nothing really, all makes sense. I guess I was confused by how to make all attributes accessible with one command in the last part of release 5, and determined that there's not really a term for 'all variables', but that you can list them out with commas, so you don't have to repeat the 'attr_accessor' text multiple times.
+-Nothing really, all makes sense. I guess I was confused by how to make all attributes accessible with
+one command in the last part of release 5, and determined that there's not really a term for 'all
+variables', but that you can list them out with commas, so you don't have to repeat the 'attr_accessor'
+text multiple times.
 
 =end

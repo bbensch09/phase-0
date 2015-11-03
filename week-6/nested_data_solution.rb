@@ -1,3 +1,18 @@
+=begin
+REFLECTION
+What are some general rules you can apply to nested arrays?
+- In general to call values you simply use a 2nd/3rd/4th bracket notation after the first one in order to retrive values from the 2nd/3rd/4th level inner arrays.
+
+What are some ways you can iterate over nested arrays?
+- pretty much any enumerable method used for iteration normally can be used over a nested array, you just have to nest the method calls within each other. Because the "do end"'s and/or { } can get confusing wiht many layer of nesting, we found that it was slightly easier to use the { } syntax, because then you're not confused by the presence of ends that are attached to if statements.
+
+Did you find any good new methods to implement or did you re-use one you were already familiar with?
+- We reused the map! destructive method mostly.
+
+What was it and why did you decide that was a good option?
+- It basically goes through each element in the array and executes your block of code on it, allowing you to modify the element as you wish.
+
+=end
 # RELEASE 2: NESTED STRUCTURE GOLF
 # Hole 1
 # Target element: "FORE"

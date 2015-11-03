@@ -3,7 +3,9 @@
 =begin
 # Reflection
 What was the most difficult part of this challenge for you and your pair?
-- I feel like the hardest thign was figuring out how to chain our instance methods to each other within the class. We tried doing it as one big chain together, but kept getting errors, so ultimately chained them each to the necessary method prior using self.method.
+- I feel like the hardest thign was figuring out how to chain our instance methods to each other within the class.
+We tried doing it as one big chain together, but kept getting errors, so ultimately chained them each to the
+necessary method prior using self.method.
 
 What new methods did you find to help you when you refactored?
 - We didn't learn any new methods but simply combined some sub methods to make things shorter & cleaner.

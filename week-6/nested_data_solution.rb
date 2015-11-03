@@ -6,7 +6,8 @@ array = [[1,2], ["inner", ["eagle", "par", ["FORE", "hook"]]]]
 
 # attempts:
 # ============================================================
-
+# CORRECT
+# p array[1][1][2][0]
 
 
 # ============================================================
@@ -19,7 +20,8 @@ hash = {outer: {inner: {"almost" => {3 => "congrats!"}}}}
 # attempts:
 # ============================================================
 
-
+# CORRECT
+# p hash[:outer][:inner]["almost"][3]
 
 # ============================================================
 
@@ -31,7 +33,8 @@ nested_data = {array: ["array", {hash: "finished"}]}
 
 # attempts:
 # ============================================================
-
+# CORRECT
+# p nested_data[:array][1][:hash]
 
 
 # ============================================================
@@ -40,8 +43,29 @@ nested_data = {array: ["array", {hash: "finished"}]}
 
 number_array = [5, [10, 15], [20,25,30], 35]
 
+number_array.map! { |element|
+  if element.kind_of?(Array)
+    element.map! { |inner| inner += 5 }
+  else element += 5
+  end
+}
 
+ # p number_array
 
 # Bonus:
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
+# startup_names = ["bit", ["find", "fast"]]
+
+
+startup_names.map!  { |element|
+    if element.kind_of?(Array)
+      element.map! { |inner| if inner.kind_of?(Array)
+            inner.map! { |inner3| inner3.to_s + "ly"}
+          else  inner.to_s + "ly" end
+      }
+    else element.to_s + "ly"
+  end
+}
+
+p startup_names

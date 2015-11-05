@@ -17,13 +17,52 @@
 //
 
 // Initial Code
-var Guard = {
-  name: "Guard";
+// var Guard = {
+//   name: "Guard";
 
 
+// }
+
+
+// Initial Code
+
+function randomNumber(upper) {
+  return Math.floor( Math.random() * upper ) + 1;
+}
+var counter = 0;
+while ( counter < 10) {
+  var randNum = randomNumber(10);
+  document.write(randNum);
+  counter += 1;
 }
 
+// Refactored Code
 
+var randomNumber = getRandomNumber(10);
+var guess;
+var guessCount = 0;
+var correctGuess = false;
+
+function getRandomNumber( upper ) {
+  var num = Math.floor(Math.random() * upper) + 1;
+  return num;
+}
+
+while (guessCount < 10) {
+  guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+  guessCount += 1;
+  if (parseInt(guess) === randomNumber) {
+    correctGuess = true;
+    break;
+  }
+}
+
+if (correctGuess) {
+  console.log('You guessed the number!');
+  console.log('It took you ' + guessCount + ' tries to guess the number ' + randomNumber);
+} else {
+  console.log("Sorry,you did not guess the number");
+}
 
 
 

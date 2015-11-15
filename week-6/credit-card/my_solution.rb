@@ -115,7 +115,15 @@ def sum_digits
   @sum = 0
   @split_digits = @doubled_digits.join.split(//).map!{|p| p.to_i}
   @split_digits.each{|x| @sum +=x}
+  @sum
 end
 
 end
+
+#DRIVER CODE
+test = CreditCard.new(1111000066660600)
+p test.split_to_digits_and_double
+p test.sum_digits
+p test.check_card
+
 

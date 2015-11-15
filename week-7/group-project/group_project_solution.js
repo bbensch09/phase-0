@@ -1,3 +1,6 @@
+
+// Add the finished solution here when you receive it.
+
 oddLengthArray  = [1, 2, 3, 4, 5, 5, 7]
 evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
 
@@ -66,97 +69,98 @@ able to calculate the median of an array.
 
 
 //Person #3 - Initial Code Solution (v1)
-//var sum = function(numbers) {
-//  var sum = 0
-//   for (var i = 0; i < numbers.length; i++) {
-//     sum += numbers[i];
-//   }
-//   return sum;
+var sum = function(numbers) {
+ var sum = 0
+  for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+}
+
+var mean = function(numbers) {
+  var mean = 0;
+  var mean = sum(numbers) / numbers.length;
+  return mean;
+}
+
+var median = function(numbers) {
+  var median = 0;
+  console.log(numbers);
+  numbers = numbers.sort(
+    function (a,b) {
+      return a > b ? 1 : a < b ? -1 : 0;
+    }
+  );
+  if (numbers.length % 2 == 0) {
+    median = (numbers[numbers.length/2] + numbers[numbers.length/2 - 1]) / 2
+  } else {
+    median = numbers[Math.floor(numbers.length / 2.0)];
+  }
+  return median;
+}
+
+// // Person #4 - Initial Code Solution (v2) - Walter
+
+
+// //Story 1:
+// var oddLengthArray = [1, 2, 3, 4, 5, 5, 7]
+// var evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
+
+// var adding = function(digits) {
+// var sum = 0
+
+// for (var i = 0; i < digits.length; i++) {
+//      sum += +digits[i];
+// }
+// return sum
 // }
 
-// var mean = function(numbers) {
-//   var mean = 0;
-//   var mean = sum(numbers) / numbers.length;
-//   return mean;
+// console.log(adding(oddLengthArray))
+// console.log(adding(evenLengthArray))
+
+// //Story 2:
+
+// var oddLengthArray = [1, 2, 3, 4, 5, 5, 7]
+// var evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
+
+// var finding_the_mean = function(digits) {
+// var sum = 0
+// var mean = 0
+
+// for (var i = 0; i < digits.length; i++) {
+//      sum += +digits[i];
+//      mean = sum / digits.length;
+// }
+// return mean
 // }
 
-// var median = function(numbers) {
-//   var median = 0;
-//   console.log(numbers);
-//   numbers = numbers.sort(
-//     function (a,b) {
-//       return a > b ? 1 : a < b ? -1 : 0;
-//     }
-//   );
-//   if (numbers.length % 2 == 0) {
-//     median = (numbers[numbers.length/2] + numbers[numbers.length/2 - 1]) / 2
-//   } else {
-//     median = numbers[Math.floor(numbers.length / 2.0)];
-//   }
-//   return median;
+// console.log(finding_the_mean(oddLengthArray))
+// console.log(finding_the_mean(evenLengthArray))
+
+// // Story 3:
+
+
+// var oddLengthArray = [1, 2, 3, 4, 5, 5, 7]
+// var evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
+
+// var finding_the_median = function(digits) {
+// var median = 0 ;
+// digits.sort(function(a, b){return a-b});
+// if (digits.length % 2 == 0) {
+//   var index_a = digits.length / 2;
+//   var index_b = index_a + 1
+//   return median = (digits[index_a] + digits[index_b]) / 2
 // }
-// Person #4 - Initial Code Solution (v2) - Walter
+// else {
+//   var index_median_odd = [Math.floor(digits.length / 2)];
+//   return median = digits[index_median_odd];
 
+// }
 
-//Story 1:
-var oddLengthArray = [1, 2, 3, 4, 5, 5, 7]
-var evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
+// }
 
-var adding = function(digits) {
-var sum = 0
-
-for (var i = 0; i < digits.length; i++) {
-     sum += +digits[i];
-}
-return sum
-}
-
-console.log(adding(oddLengthArray))
-console.log(adding(evenLengthArray))
-
-//Story 2:
-
-var oddLengthArray = [1, 2, 3, 4, 5, 5, 7]
-var evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
-
-var finding_the_mean = function(digits) {
-var sum = 0
-var mean = 0
-
-for (var i = 0; i < digits.length; i++) {
-     sum += +digits[i];
-     mean = sum / digits.length;
-}
-return mean
-}
-
-console.log(finding_the_mean(oddLengthArray))
-console.log(finding_the_mean(evenLengthArray))
-
-// Story 3:
-
-
-var oddLengthArray = [1, 2, 3, 4, 5, 5, 7]
-var evenLengthArray = [4, 4, 5, 5, 6, 6, 6, 7]
-
-var finding_the_median = function(digits) {
-var median = 0 ;
-digits.sort(function(a, b){return a-b});
-if (digits.length % 2 == 0) {
-  var index_a = digits.length / 2;
-  var index_b = index_a + 1
-  return median = (digits[index_a] + digits[index_b]) / 2
-}
-else {
-  var index_median_odd = [Math.floor(digits.length / 2)];
-  return median = digits[index_median_odd];
-
-}
-
-}
-
-console.log(finding_the_median(oddLengthArray))
-console.log(finding_the_median(evenLengthArray))
+// console.log(finding_the_median(oddLengthArray))
+// console.log(finding_the_median(evenLengthArray))
 
 
 
@@ -165,4 +169,3 @@ console.log(finding_the_median(evenLengthArray))
 // Person #5 - Refactor and translate solution back to user stories (v1)
 
 
-// Person #6 - Refactor and translate solution back to user stories (v2)

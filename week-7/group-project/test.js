@@ -169,7 +169,6 @@ var median = function(numbers) {
 // Person #5 - Refactor and translate solution back to user stories (v1)
 
 
-// Person #6 - Refactor and translate solution back to user stories (v2)
 
 // __________________________________________
 // Tests:  Do not alter code below this line.

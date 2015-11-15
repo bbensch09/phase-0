@@ -17,91 +17,93 @@
 //
 
 // Initial Code
-var prompt = require('prompt');
-prompt.start();
-
-var Guard = {
-  name: "Guardian Greg",
-  secret_number: 0
-}
 
 var Prisoner = {
   name: "Prisoner Pete",
-  status: "captive"
+  status: "captive",
+  guessCount: 0,
+  correctGuess: false
 }
 
-var guess_count = 0
-var guesses_left = 3 - guess_count
+var Guard = {
+  name: "Guardian Greg",
+  secretNumber: makeSecretNumber(10)
+}
 
-Guard.secret_number = Math.floor(Math.random() * 10) + 1;
-console.log(Guard.secret_number);
+function makeSecretNumber( max ) {
+  var secret = Math.floor(Math.random() * max + 1);
+  return secret;
+}
 
-// function setSecretNumber( upper ) {
-//   var Guard.secret_number = Math.floor(Math.random() * upper) + 1;
-//   return num;
-// }
-// console.log(setSecretNumber(10));
+while (Prisoner.guessCount < 4) {
+  guess = prompt("If you can guess my secret number between 1 and 10, you'll be freed. You have 4 tries. What is it?");
+  Prisoner.guessCount += 1;
+  if (parseInt(guess) === Guard.secretNumber) {
+    Prisoner.correctGuess = true;
+    break;
+  }
+}
 
-// while (guess_count < 4 ) {
-  prompt.get(['guess1'], function prisonerGuess (err,number) {
-  var current_guess = number.guess1;
-  console.log(current_guess);
-  guesses_left = guesses_left - 1;
-  if (Guard.secret_number == current_guess) {
-      Prisoner.status = "free";
-      console.log('Congratulations, you are now ' + Prisoner.status);
-      }
-    else {console.log("I'm sorry that was incorrect. You have " + guesses_left + " guesses remaining.");}
-  });
+console.log('The secret number was ' + Guard.secretNumber);
+if (Prisoner.correctGuess) {
+  console.log("Congrats, you're now free!");
+  console.log('It took you ' + Prisoner.guessCount + ' tries to guess the number ' + Guard.secretNumber);
+} else {
+  console.log("Sorry,you guessed wrong and are still captive.");
+}
 
+// REFACTORED CODE
+// I removed Prisoner.status in the first object as it turned out to be redundant and unnecessary.
+// I also removed prisoner and guardian names as initial properties. Instead I kept Guardian Greg as fixed text and allowed the user to choose their name.
 
+var Prisoner = {
+  guessCount: 0,
+  correctGuess: false
+}
 
-// BROWSER CONSOLE CODE --> THIS WORKS
+var Guard = {
+  secretNumber: makeSecretNumber(10)
+}
 
-// var secretNumber = getSecretNumber(10);
-// var guess;
-// var guessCount = 0;
-// var correctGuess = false;
+function chooseName() {
+  Prisoner.name = prompt("Choose a name")
+}
 
-// function getSecretNumber( upper ) {
-//   var num = Math.floor(Math.random() * upper) + 1;
-//   return num;
-// }
+function makeSecretNumber( max ) {
+  var secret = Math.floor(Math.random() * max + 1);
+  return secret;
+}
 
-// while (guessCount < 10) {
-//   guess = prompt("If you can guess my secret number between 1 and 10, you'll be freed. What is it?");
-//   guessCount += 1;
-//   if (parseInt(guess) === secretNumber) {
-//     correctGuess = true;
-//     break;
-//   }
-// }
+chooseName();
 
-// if (correctGuess) {
-//   console.log("Congrats, you're now free!");
-//   console.log('It took you ' + guessCount + ' tries to guess the number ' + secretNumber);
-// } else {
-//   console.log("Sorry,you guessed wrong and are still captive.");
-// }
+while (Prisoner.guessCount < 4) {
+  guess = prompt("Welcome to prison " + Prisoner.name + ". I am Guardian Greg. If you can guess my secret number between 1 and 10, you'll be freed. You have 4 tries. What is it?");
+  Prisoner.guessCount += 1;
+  if (parseInt(guess) === Guard.secretNumber) {
+    Prisoner.correctGuess = true;
+    break;
+  }
+}
 
-
-
-// Refactored Code
-
-
-
+console.log('The secret number was ' + Guard.secretNumber);
+if (Prisoner.correctGuess) {
+  console.log("Congrats, you're now free!");
+  console.log('It took you ' + Prisoner.guessCount + ' tries to guess the number ' + Guard.secretNumber);
+} else {
+  console.log("Sorry,you guessed wrong and are still captive.");
+}
 
 
 /*
 // Reflection
 What was the most difficult part of this challenge?
--This was a very difficult challenge. As you can see from my pseudocode the amount of code that's left commented, I was far more ambitious in what I thought would be achievable, and ran out of time to finish the game. All the code currently does is let the prisoner guess once, and they either are freed or remain captive. The most difficult part was figuring out the way to use prompts in node.js, because it didn't just work out of the box as it did in Codecademy. Additionally, I ran into a number of cases when I ran an infinite loop, which crashed my shell a few too many times.
+-This was a very difficult challenge. As you can see from comparing my pseudocode vs what I was actually able to build, I was far more ambitious in what I thought would be achievable, and ran out of time to finish the game. The code currently lets the prisoner guess 4 times, and they either are freed or remain captive. I wasn't able to build in the "beg" function, nor was I able to make the game continue after one round of guessing. The most difficult part was deciding whether I should be running this in Chrome console or node. I had some trouble figuring out the way to use prompts in node.js, and so ultimately went with the console approach. Additionally, I ran into a number of cases when I ran an infinite loop, which crashed my shell a few too many times.
 
 What did you learn about creating objects and functions that interact with one another?
 -It takes careful planning an a thorough understanding of when functions are passing through vs. changing actual variables, and my understanding is only partially there. Since I had limited time this week to due travels, I'm very much going to dig into this further next week.
 
 Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
-- I didn't learn any new built-in methods.
+- I don't know that I learned any new built-in methods in Javascript during this challenge.
 
 How can you access and manipulate properties of objects?
 - You access properties of obejects by calling Object.property and can manipulate it by setting it equal to some new value.

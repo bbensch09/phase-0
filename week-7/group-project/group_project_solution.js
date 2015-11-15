@@ -162,10 +162,6 @@ console.log(finding_the_median(evenLengthArray))
 
 
 
-
-
-
-
 // Person #5 - Refactor and translate solution back to user stories (v1)
 
 

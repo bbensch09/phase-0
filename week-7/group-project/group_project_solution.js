@@ -1,5 +1,11 @@
 //REFLECTION
-// Our group managed to complete all three of the users stories and were able to pass all 9 of the tests in the test.js file. Like previous group projects, I think this reinforced that the largest obstacles for a group project tend to be coordinating schedules and communication far more than the code itself. In particular, this reinforced that if you want functions to have a specific nomenclature, you must be specific about that when drafting user stories. Otherwise you may get back a workable solution, but it might still require tweaking to match your existing nomenclature (in this case, how the test.js file was written.)
+// Our group managed to complete all three of the users stories and were able to pass all 9 of the tests
+// in the test.js file. Like previous group projects, I think this reinforced that the largest obstacles
+// for a group project tend to be coordinating schedules and communication far more than the code itself.
+// In particular, this reinforced that if you want functions to have a specific nomenclature, you must
+// be specific about that when drafting user stories. Otherwise you may get back a workable solution,
+// but it might still require tweaking to match your existing nomenclature (in this case, how the test.
+// js file was written.)
 
 // Add the finished solution here when you receive it.
 

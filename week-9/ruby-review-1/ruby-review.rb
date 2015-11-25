@@ -116,7 +116,7 @@ class Car
     @pizza_box = []
   end
 
-  def drive(distance, speed)
+  def drive(distance, speed) #can we make this second argument optional?
     @total_distance += distance
     @speed = speed
     @last_action = "You were driving #{distance} miles at #{speed} mph."
@@ -193,7 +193,7 @@ new_car.turn_right
 new_car.drive(1.5,35)
 new_car.display
 new_car.change_speed(15)
-new_car.drive(0.25,15) #if we have time; lets confirm how to make second arguments optional in Ruby?
+new_car.drive(0.25,15)
 new_car.stop
 new_car.turn_left
 new_car.drive(1.4,35)
@@ -214,10 +214,16 @@ At the stop sign, turn left
 Drive 1.4 miles (speed limit is 35 mph)
 Stop at your destination
 Log your total distance travelled
-=end
-
-
-
 
 
 # 5. Reflection
+What concepts did you review in this challenge?
+- We reviewed a number of core ruby concepts, from how to embed variables into strings using the #{variable} notation, to basic pushing and shifting of elements into and out of arrays.
+
+What is still confusing to you about Ruby?
+- What was most confusing was trying to figure out how to flatten a nested array such that you could print out elements in a user-friendly manner. i.e. we wanted to be able to describe all of the contents in the pizza box no matter how many pizzas were in there, but we ultimately coudln't get anything clean, so settled on a description of the pizza box that prints out what was just delivered, and what pizza is next to be delivered. Additionally, we didn't have time to figure out how to make arguments optional in Ruby, which is one of the nice things about Javascript. It didn't seem hugely important, but would be something worth reviewing at a later time.
+
+What are you going to study to get more prepared for Phase 1?
+- I'm going to continue reviewing Javascript. This exercises cemented a lot of my Ruby knowledge, but I know I am far less confident in my Javascript abilities at this point.
+
+=end
